@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'config/settings.php';
 $conn = mysqli_connect($dbServer, $dbUser, $dbPassword, $dbName);
 if (!$conn) {
@@ -6,7 +7,7 @@ if (!$conn) {
 }
 ?>
 
-<form action="/sv_inloggen.php">
+<form method="post" action="/auth.php">
   <br>
   Gebruikersnaam:<br>
   <input type="text" name="user_gn">
