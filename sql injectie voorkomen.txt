@@ -1,5 +1,0 @@
-voortgang:
-- php inloggen werkt!
-
-TO DO:
-registreren!
