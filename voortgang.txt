@@ -1,0 +1,8 @@
+voortgang:
+- kan inloggen
+- kan registreren
+
+TO DO:
+- profiel.php (laat gebruikersnaam en account id zien)
+   - wachtwoord veranderen
+   - gebruikersnaam veranderen
