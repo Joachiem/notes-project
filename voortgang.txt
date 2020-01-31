@@ -4,5 +4,5 @@ voortgang:
 
 TO DO:
 - profiel.php (laat gebruikersnaam en account id zien)
-   - wachtwoord veranderen
-   - gebruikersnaam veranderen
+   - wachtwoord veranderen (change_ww.php)
+   - gebruikersnaam veranderen (change_gn.php)

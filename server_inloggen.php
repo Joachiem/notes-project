@@ -22,9 +22,8 @@ if ($stmt = $conn->prepare('SELECT user_id, wachtwoord FROM gebruikers WHERE geb
 	if (md5($_POST['user_ww']) == $password) {
 		session_regenerate_id();
 		$_SESSION['loggedin'] = TRUE;
-		$_SESSION['gb'] = $_POST['user_gn'];
 		$_SESSION['user_id'] = $id;
-		echo $_SESSION['gb'] . ' is succesvol ingelogd!';
+		header('Location: profiel.php');
 	} else {
 		echo 'Het ingevoerde wachtwoord is niet juist!';
 	}
