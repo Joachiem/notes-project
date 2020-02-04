@@ -15,16 +15,35 @@ $stmt = $conn->prepare('SELECT gebruikersnaam FROM gebruikers WHERE user_id = ?'
   echo "Verander het wachtwoord van gebruiker: " . $gebruikersnaam;
 ?>
 
-<form method="post" action="server_change_ww.php">
-  <br>
-  Huidige wachtwoord:<br>
-  <input type="password" name="user_ww_old">
-  <br>
-  Nieuwe wachtwoord:<br>
-  <input type="password" name="user_ww_new">
-  <br>
-  Herhaal nieuwe wachtwoord:<br>
-  <input type="password" name="user_ww_new_2">
-  <br><br>
-  <input type="submit" value="Verander wachtwoord">
-</form>
+<!DOCTYPEhtml>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
+		<link rel="stylesheet" type="text/css" href="style/main.css">
+		<script src="scripts/darkmode.js"></script>
+	</head>
+	<body id="body" class="dark-mode">
+		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
+		<form method="post" action="server_change_ww.php">
+			<div class="form-item">
+				<label>Huidig wachtwoord</label>
+				<div class="input-wrapper">
+					<input type="password" name="user_ww_old">
+				</div>	
+			</div>
+			<div class="form-item">
+				<label>Nieuw wachtwoord<label>
+				<div class="input-wrapper"></div>
+					<input type="password" name="user_ww_new">
+				</div>	
+			</div>
+			<div class="form-item">
+				<label>Herhaal nieuw wachtwoord</label>
+				<div class="input-wrapper">
+					<input type="password" name="user_ww_new_2">
+				</div>
+			</div>
+			<input class="submit" type="submit" value="VERANDER WACHTWOORD">
+		</form>
+	</body>	
+</html>
