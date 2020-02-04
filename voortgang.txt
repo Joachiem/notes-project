@@ -1,7 +1,0 @@
-voortgang:
-- kan inloggen
-- kan registreren
-- kan wachtwoord veranderen
-
-TO DO:
-- notitie's coderen
