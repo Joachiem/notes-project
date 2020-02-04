@@ -1,0 +1,8 @@
+voortgang:
+- kan inloggen
+- kan registreren
+- kan wachtwoord veranderen
+- note's DB klaar
+
+TO DO:
+- notitie's coderen
