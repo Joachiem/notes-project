@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
 body {
 	display: grid;
 	place-content: center;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	height: 100vh;
 	font-family: 'Roboto', sans-serif;
-	background-color: #000000;
-	color: #ffffff;
+	text-align: center;
 }
 
 h1 {
@@ -40,11 +43,83 @@ h1:hover::after {
 form {
 	text-transform: uppercase;
 	letter-spacing: .15em;
-	padding-left: 20px;
+	padding: 1rem;
+	position: relative;
+}
+
+form > * + * {
+	margin-top: 1rem;
+}
+
+.form-item > * + * {
+	margin-top: 0.5rem;
 }
 
 input {
 	font-family: inherit;
 	background: #000;
 	color: #fff;
+}
+
+label, input, button {
+	font-size: 1.5rem;
+}
+
+button {
+	border: none;
+}
+
+.submit {
+	cursor: pointer;
+	margin: calc(1rem * 2) 0 0 2px;
+	padding: 0.75rem 1.25rem;
+}
+
+.submit:active {
+	transform: translateY(1px);
+}
+
+.input-wrapper {
+	position: relative;
+}
+
+input {
+	padding: 0.75rem 4rem 0.75rem 0.75rem;
+	width: 100%;
+	border: 2px solid transparent;
+	border-radius: 0;
+}
+
+input:focus {
+	outline-offset: 1px;
+}
+
+body.dark-mode {
+	background-color: #111;
+	color: #eee;
+}
+
+body.light-mode {
+	background-color: #eee;
+	color: #111;
+}
+
+body.dark-mode button {
+	background-color: #eee;
+	color: #111;
+}
+
+body.light-mode button {
+	background-color: #111;
+	color: #eee;	
+}
+
+body.dark-mode input {
+	background-color: #eee;
+	color: #111;
+}
+
+body.light-mode input {
+	background-color: #111;
+	color: #eee;
 }

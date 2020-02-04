@@ -10,19 +10,27 @@ if (!$conn) {
 <!DOCTYPEhtml>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
 		<link rel="stylesheet" type="text/css" href="style/main.css">
+		<script src="scripts/darkmode.js"></script>
 	</head>
-	<body>
-		<div class="container">
-			<h1>Notes.</h1>
-			<form method="post" action="server_inloggen.php">
-				<br>Gebruikersnaam:<br>
-				<input type="text" name="user_gn">
-				<br>Wachtwoord:<br>
-				<input type="password" name="user_ww">
-				<br><br>
-				<input type="submit" value="Inloggen">
-			</form>
-		</div>	
+	<body id="body" class="dark-mode">
+		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
+		<h1>Notes.</h1>
+		<form method="post" action="server_inloggen.php">
+			<div class="form-item">
+				<label>Gebruikersnaam</label>
+				<div class="input-wrapper">
+					<input type="text" name="user_gn">
+				</div>
+			</div>
+			<div class="form-item">
+				<label>Wachtwoord</label>
+				<div class="input-wrapper">
+					<input type="password" name="user_ww">
+				</div>
+			</div>
+			<input class="submit" type="submit" value="INLOGGEN">
+		</form>	
 	</body>	
 </html>
