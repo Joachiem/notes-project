@@ -1,8 +1,7 @@
 voortgang:
 - kan inloggen
 - kan registreren
+- kan wachtwoord veranderen
 
 TO DO:
-- profiel.php (laat gebruikersnaam en account id zien)
-   - wachtwoord veranderen (change_ww.php)
-   - gebruikersnaam veranderen (change_gn.php)
+- notitie's coderen
