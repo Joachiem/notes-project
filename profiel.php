@@ -14,6 +14,7 @@ if (!$conn) {
 		<script src="scripts/darkmode.js"></script>
 	</head>
 	<body class="dark-mode">
+		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
 		<?php
 		if (!$_SESSION['loggedin'] == TRUE) {
 			header('Location: inloggen.php');
