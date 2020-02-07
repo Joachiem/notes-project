@@ -6,3 +6,6 @@ voortgang:
 
 TO DO:
 - notitie's coderen
+	- server_create_note
+	- note_edit
+	- note_delete

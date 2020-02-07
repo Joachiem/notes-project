@@ -36,4 +36,10 @@ if (!$conn) {
 				<input class="verander-wachtwoord" type="submit" value="VERANDER WACHTWOORD" />
 			</div>	
 		</form>
+        <br>
+		<form action="my_notes.php">
+			<div class="form-item">
+				<input class="......" type="submit" value="MIJN NOTITIES" />
+			</div>	
+		</form>
 </html>
