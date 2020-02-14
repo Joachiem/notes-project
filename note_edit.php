@@ -1,5 +1,9 @@
 <?php
 session_start();
+$conn = mysqli_connect($dbServer, $dbUser, $dbPassword, $dbName);
+if (!$conn) {
+    die("De MySQL server kon niet bereikt worden.");
+}
 if (!$_SESSION['loggedin'] == TRUE) {
 			header('Location: inloggen.php');
 }
@@ -20,10 +24,10 @@ if (!$_SESSION['loggedin'] == TRUE) {
 <form action="server_save_note.php" method="post">
         
         <label>Naam:</label><br>
-        <textarea id="content"><?php echo $titel; ?></textarea><br>
+        <textarea name="titel"><?php echo $titel; ?></textarea><br>
 
         <label>Note:</label><br>
-        <textarea id="content"><?php echo $inhoud; ?></textarea><br>
+        <textarea name="content"><?php echo $inhoud; ?></textarea><br>
     
         <button type="submit">OPSLAAN</button>
     </div>
