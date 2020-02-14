@@ -3,9 +3,11 @@ voortgang:
 - kan registreren
 - kan wachtwoord veranderen
 - note's DB klaar
+- note's create klaar
+- editor klaar
 
 TO DO:
 - notitie's coderen
-	- server_create_note
-	- note_edit
+	- lijst met notities
+	- note_save
 	- note_delete

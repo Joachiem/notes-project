@@ -14,3 +14,5 @@ if (!$_SESSION['loggedin'] == TRUE) {
 		</form>
 
 // hier iets met foreach voor elke notitie van de gebruiker (bewerken en verwijderen)
+
+<?php } ?>
