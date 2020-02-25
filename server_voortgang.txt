@@ -5,9 +5,15 @@ voortgang:
 - note's DB klaar
 - note's create klaar
 - editor klaar
+- note_save klaar
+- note_delete klaar
 
 TO DO:
 - notitie's coderen
 	- lijst met notities
-	- note_save
-	- note_delete
+	
+
+feedback:
+- werkt alles met sepciale tekens?
+- pins?
+- laatst gewijzigde notitie?

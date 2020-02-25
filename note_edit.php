@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'config/settings.php';
 $conn = mysqli_connect($dbServer, $dbUser, $dbPassword, $dbName);
 if (!$conn) {
     die("De MySQL server kon niet bereikt worden.");
@@ -7,8 +8,7 @@ if (!$conn) {
 if (!$_SESSION['loggedin'] == TRUE) {
 			header('Location: inloggen.php');
 }
-	require 'config/settings.php';
-	$conn = mysqli_connect($dbServer, $dbUser, $dbPassword, $dbName);
+	
 	$stmt = $conn->prepare('SELECT titel, inhoud, user_id FROM notities WHERE note_id = ?');
 	$stmt->bind_param('s', $_GET['id']);
 	$stmt->execute();
@@ -21,7 +21,7 @@ if (!$_SESSION['loggedin'] == TRUE) {
 
 ?>
 <html>
-<form action="server_save_note.php" method="post">
+<form action="server_save_note.php?id=<?php echo $_GET['id'] ?>" method="post">
         
         <label>Naam:</label><br>
         <textarea name="titel"><?php echo $titel; ?></textarea><br>

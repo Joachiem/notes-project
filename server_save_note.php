@@ -8,6 +8,8 @@ if (!$conn) {
 if (!$_SESSION['loggedin'] == TRUE) {
 			header('Location: inloggen.php');
 }
+	
+if (isset($_POST['titel'], $_POST['content'])) {
 	$conn = mysqli_connect($dbServer, $dbUser, $dbPassword, $dbName);
 	$stmt = $conn->prepare('SELECT user_id FROM notities WHERE note_id = ?');
 	$stmt->bind_param('s', $_GET['id']);
@@ -15,10 +17,17 @@ if (!$_SESSION['loggedin'] == TRUE) {
 	$stmt->store_result();
 	$stmt->bind_result($user_id);
 	$stmt->fetch();
-	if ($_SESSION['user_id'] != $user_id) {
+	if ($_SESSION['user_id'] == $user_id) {
+	$stmt = $conn->prepare('UPDATE notities SET titel = ?, inhoud = ? WHERE note_id = ?');
+	$stmt->bind_param('sss', $_POST['titel'], $_POST['content'], $_GET['id']);
+	$stmt->execute();
+	echo "Succesvol opgeslagen!";
+	// knop die je terug naar de editor brengt (met juiste id!)
+
+	} else {
 		die('Je hebt geen toestemming om deze notitie te bewerken!');
 	}
 
-	$stmt = $conn->prepare('UPDATE notities SET titel = ?,   ');
-	$stmt->bind_param('sss', $_POST['titel'], $_POST['content'], $_GET['id']);
-	$stmt->execute();
+} else {
+	header('Location: my_notes.php');
+}
