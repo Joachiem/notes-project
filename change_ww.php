@@ -33,7 +33,7 @@ $stmt = $conn->prepare('SELECT gebruikersnaam FROM gebruikers WHERE user_id = ?'
 			</div>
 			<div class="form-item">
 				<label>Nieuw wachtwoord<label>
-				<div class="input-wrapper"></div>
+				<div class="input-wrapper">
 					<input type="password" name="user_ww_new">
 				</div>	
 			</div>
