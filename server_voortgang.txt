@@ -7,11 +7,10 @@ voortgang:
 - editor klaar
 - note_save klaar
 - note_delete klaar
+- my_notes klaar
 
 TO DO:
-- notitie's coderen
-	- lijst met notities
-	
+BUG: elke gebruiker kan alle notities verwijderen!
 
 feedback:
 - werkt alles met sepciale tekens?

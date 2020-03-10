@@ -21,8 +21,7 @@ if (isset($_POST['titel'], $_POST['content'])) {
 	$stmt = $conn->prepare('UPDATE notities SET titel = ?, inhoud = ? WHERE note_id = ?');
 	$stmt->bind_param('sss', $_POST['titel'], $_POST['content'], $_GET['id']);
 	$stmt->execute();
-	echo "Succesvol opgeslagen!";
-	// knop die je terug naar de editor brengt (met juiste id!)
+	header('Location: my_notes.php');
 
 	} else {
 		die('Je hebt geen toestemming om deze notitie te bewerken!');
