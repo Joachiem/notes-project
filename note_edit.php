@@ -20,16 +20,29 @@ if (!$_SESSION['loggedin'] == TRUE) {
 	}
 
 ?>
+<!DOCTYPEhtml>
 <html>
-<form action="server_save_note.php?id=<?php echo $_GET['id'] ?>" method="post">
-        
-        <label>Naam:</label><br>
-        <textarea name="titel"><?php echo $titel; ?></textarea><br>
-
-        <label>Note:</label><br>
-        <textarea name="content"><?php echo $inhoud; ?></textarea><br>
-    
-        <button type="submit">OPSLAAN</button>
-    </div>
-</form>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
+		<link rel="stylesheet" type="text/css" href="style/main.css">
+		<script src="scripts/darkmode.js"></script>
+	</head>
+	<body id="body" class="dark-mode">
+		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
+		<form action="server_save_note.php?id=<?php echo $_GET['id'] ?>" method="post">
+			<div class="form-item">
+				<label>Naam:</label>
+				<div class="input-wrapper">
+					<textarea name="titel"><?php echo $titel; ?></textarea>
+				</div>	
+			</div>	
+			<div class="form-item">
+				<label>Note:</label>
+				<div class="input-wrapper">
+					<textarea name="content"><?php echo $inhoud; ?></textarea>
+				</div>
+			</div>
+			<button type="submit">OPSLAAN</button>
+	</form>
+	</body>
 </html>
