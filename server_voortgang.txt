@@ -10,7 +10,10 @@ voortgang:
 - my_notes klaar
 
 TO DO:
-BUG: elke gebruiker kan alle notities verwijderen!
+testen op bugs
+
+navigatiebar
+
 
 feedback:
 - werkt alles met sepciale tekens?

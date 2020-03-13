@@ -6,6 +6,10 @@ if (!$conn) {
     die("De MySQL server kon niet bereikt worden.");
 }
 
+if (!$_SESSION['loggedin'] == TRUE) {
+			header('Location: inloggen.php');
+		}
+
 $stmt = $conn->prepare('SELECT gebruikersnaam FROM gebruikers WHERE user_id = ?');
   $stmt->bind_param('s', $_SESSION['user_id']);
   $stmt->execute();

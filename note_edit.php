@@ -16,7 +16,7 @@ if (!$_SESSION['loggedin'] == TRUE) {
 	$stmt->bind_result($titel, $inhoud, $user_id);
 	$stmt->fetch();
 	if ($_SESSION['user_id'] != $user_id) {
-		die('Je hebt geen toestemming om deze notitie te bekijken!');
+		header('Location: my_notes.php');
 	}
 
 ?>

@@ -19,21 +19,36 @@ if ($_POST['user_ww'] == $_POST['user_ww2']) {
 		$stmt->store_result();
 		if ($stmt->num_rows > 0) {
 			echo "De ingevoerde gebruikersnaam bestaat al, kies een andere gebruikersnaam!";
+			?> <form action="registreren.php">
+					<input type="submit" value="GA TERUG" />
+				</form> <?php
 		} else {
 			if ($stmt = $conn->prepare('INSERT INTO gebruikers (gebruikersnaam, wachtwoord) VALUES (?, ?)')) {
 				$password = md5($_POST['user_ww']);
 				$stmt->bind_param('ss', $_POST['user_gn'], $password);
 				$stmt->execute();
 				echo 'U heeft zich succesvol geregistreerd, u kan nu inloggen!';
+				?> <form action="inloggen.php">
+					<input type="submit" value="INLOGGEN" />
+				</form> <?php
 			} else {
 				echo "Er is een fout opgetreden tijdens het verwerken van uw registratie, probeer het later opnieuw!";
+				?> <form action="registreren.php">
+					<input type="submit" value="GA TERUG" />
+				</form> <?php
 			}
 		}
 		$stmt->close();
 	} else {
 		echo "Er is een fout opgetreden tijdens het verwerken van uw registratie, probeer het later opnieuw!";
+		?> <form action="registreren.php">
+					<input type="submit" value="GA TERUG" />
+				</form> <?php
 	}
 	$conn->close();
 } else {
 	echo "De ingevulde wachtwoorden komen niet overeen!";
+	?> <form action="registreren.php">
+					<input type="submit" value="GA TERUG" />
+				</form> <?php
 }
