@@ -46,7 +46,7 @@ if (!$_SESSION['loggedin'] == TRUE) {
 					<input type="submit" value="NAAR MIJN PROFIEL" />
 				</form> <?php
 	} else {
-		echo "Het ingevoerde wachtwoord is onjuist";
+		echo "Het ingevoerde oude wachtwoord is onjuist";
 		?> <form action="change_ww.php">
 					<input type="submit" value="GA TERUG" />
 				</form> <?php

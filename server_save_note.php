@@ -24,7 +24,7 @@ if (isset($_POST['titel'], $_POST['content'])) {
 	header('Location: my_notes.php');
 
 	} else {
-		die('Je hebt geen toestemming om deze notitie te bewerken!');
+		header('Location: my_notes.php');
 	}
 
 } else {

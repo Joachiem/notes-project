@@ -26,9 +26,15 @@ if ($stmt = $conn->prepare('SELECT user_id, wachtwoord FROM gebruikers WHERE geb
 		header('Location: profiel.php');
 	} else {
 		echo 'Het ingevoerde wachtwoord is niet juist!';
+		?> <form action="inloggen.php">
+					<input type="submit" value="GA TERUG" />
+				</form> <?php
 	}
 } else {
 	echo 'De ingevoerde gebruikersnaam bestaat niet in onze database!';
+	?> <form action="inloggen.php">
+					<input type="submit" value="GA TERUG" />
+				</form> <?php
 }
 
 

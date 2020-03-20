@@ -8,7 +8,7 @@ if (!$conn) {
 if (!$_SESSION['loggedin'] == TRUE) {
 			header('Location: inloggen.php');
 		} else { ?>
-<br>
+<br><meta charset="UTF-8">
 		<form action="server_create_note.php">
 				<input type="submit" value="NIEUWE NOTITIE MAKEN" />
 		</form><br>

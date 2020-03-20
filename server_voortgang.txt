@@ -10,10 +10,9 @@ voortgang:
 - my_notes klaar
 
 TO DO:
-testen op bugs
-
-navigatiebar
-
+1. testen op bugs
+2. navigatiebar
+3. darkmode fixen in profiel.php
 
 feedback:
 - werkt alles met sepciale tekens?

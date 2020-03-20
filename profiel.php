@@ -8,6 +8,7 @@ if (!$conn) {
 ?>
 <!DOCTYPEhtml>
 <html>
+<meta charset="UTF-8">
 	<head>
 		<link rel="stylesheet" type="text/css" href="style/reset.css">
 		<link rel="stylesheet" type="text/css" href="style/main.css">
