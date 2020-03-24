@@ -11,7 +11,8 @@ voortgang:
 
 TO DO:
 1. testen op bugs
-2. navigatiebar
+2. navigatiebar (Jasper)
+3. CSS in server_....
 
 feedback:
 - werkt alles met sepciale tekens?
