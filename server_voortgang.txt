@@ -12,8 +12,6 @@ voortgang:
 TO DO:
 1. testen op bugs
 2. navigatiebar
-3. CSS in my_notes.php
-4. darkmode fixen in profiel.php
 
 feedback:
 - werkt alles met sepciale tekens?
