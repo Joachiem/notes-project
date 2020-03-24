@@ -19,8 +19,6 @@ if (isset($_GET['id'])) {
 	
 	if ($_SESSION['user_id'] == $owner) {
 	echo "Wil je deze notitie echt verwijderen?<br>"; 
-	echo "User: " . $owner;
-	echo "<br>Owner: " . $_SESSION['user_id'];
 	?><html><br><br>
 	<a href="note_delete.php?id=<?php echo $_GET['id'] ?>&confirm=yes">Ja</a>
     <a href="note_delete.php?id=<?php echo $_GET['id'] ?>&confirm=no">Nee</a>
