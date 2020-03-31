@@ -8,7 +8,7 @@ if (!$conn) {
 if (!$_SESSION['loggedin'] == TRUE) {
 			header('Location: inloggen.php');
 		} else { ?>
-
+<!DOCTYPEhtml>
 <html>
 <meta charset="UTF-8">
 	<head>
@@ -17,12 +17,14 @@ if (!$_SESSION['loggedin'] == TRUE) {
 		<script src="scripts/darkmode.js"></script>
 	</head>
 	<body id="body" class="dark-mode">
+		<ul class="navbar">
+			<li><a href="profiel.php">Mijn Profiel</a></li>
+		</ul>
 		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
-		
 		<form action="server_create_note.php">
-				<input type="submit" value="NIEUWE NOTITIE MAKEN" />
+			<input class="submit" type="submit" value="NIEUWE NOTITIE MAKEN" />
 		</form><br>
-		<h2>Mijn notities:</h2><br>
+		<h2>MIJN NOTITIES:</h2>
 		<table>
 			  <tr>
 				<th>Nr.</th>
@@ -43,6 +45,6 @@ if (!$_SESSION['loggedin'] == TRUE) {
 				<?php
 				$x++;
 	}
-	?></table>
+	?>	</table>
 	</body>
-	</html>
+</html>
