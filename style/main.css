@@ -131,6 +131,7 @@ body.light-mode input {
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+  margin: 10px;
 }
 
 th, td {
@@ -158,4 +159,11 @@ li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+}
+
+table a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
 }
