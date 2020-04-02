@@ -16,6 +16,9 @@ if (!$conn) {
 		<script src="scripts/darkmode.js"></script>
 	</head>
 	<body id="body" class="dark-mode">
+	<ul class="navbar">
+			<li><a href="inloggen.php">Inloggen</a><li>
+		</ul>
 		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
 		<form method="post" action="server_registreren.php">
 			<div class="form-item">
