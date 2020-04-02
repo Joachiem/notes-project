@@ -19,6 +19,7 @@ if (!$_SESSION['loggedin'] == TRUE) {
 	<body id="body" class="dark-mode">
 		<ul class="navbar">
 			<li><a href="profiel.php">Mijn Profiel</a></li>
+			<li id="right"><a href="uitloggen.php">Uitloggen</a></li>
 		</ul>
 		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
 		<form action="server_create_note.php">
