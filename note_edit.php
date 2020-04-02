@@ -29,6 +29,11 @@ if (!$_SESSION['loggedin'] == TRUE) {
 		<script src="scripts/darkmode.js"></script>
 	</head>
 	<body id="body" class="dark-mode">
+		<ul class="navbar">
+			<li><a href="my_notes.php">Mijn Notities</a><li>
+			<li><a href="profiel.php">Mijn Profiel</a></li>
+			<li id="right"><a href="uitloggen.php">Uitloggen</a></li>
+		</ul>
 		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
 		<form action="server_save_note.php?id=<?php echo $_GET['id'] ?>" method="post">
 			<div class="form-item">
