@@ -31,6 +31,7 @@ $stmt = $conn->prepare('SELECT gebruikersnaam FROM gebruikers WHERE user_id = ?'
 		<ul class="navbar">
 			<li><a href="my_notes.php">Mijn Notities</a><li>
 			<li><a href="profiel.php">Mijn Profiel</a></li>
+			<li id="right"><a href="uitloggen.php">Uitloggen</a></li>
 		</ul>
 		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
 		<form method="post" action="server_change_ww.php">
