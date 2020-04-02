@@ -15,6 +15,10 @@ if (!$conn) {
 		<script src="scripts/darkmode.js"></script>
 	</head>
 	<body id="body" class="dark-mode">
+		<ul class="navbar">
+			<li><a href="my_notes.php">Mijn Notities</a><li>
+			<li id="right"><a href="uitloggen.php">Uitloggen</a></li>
+		</ul>
 		<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button><br>
 		<?php
 		if (!$_SESSION['loggedin'] == TRUE) {
@@ -38,9 +42,4 @@ if (!$conn) {
 			</div>	
 		</form>
         <br>
-		<form action="my_notes.php">
-			<div class="form-item">
-				<input class="......" type="submit" value="MIJN NOTITIES" />
-			</div>	
-		</form>
 </html>
