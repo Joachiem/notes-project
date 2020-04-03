@@ -1,3 +1,14 @@
+<!DOCTYPEhtml>
+<html>
+<meta charset="UTF-8">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
+		<link rel="stylesheet" type="text/css" href="style/main.css">
+		<script src="scripts/darkmode.js"></script>
+	</head>
+	<body id="body" class="dark-mode">
+	<button type="button" class="darkmode" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button><br>
+	
 <?php
 session_start();
 require 'config/settings.php';
@@ -19,10 +30,10 @@ if (isset($_GET['id'])) {
 	
 	if ($_SESSION['user_id'] == $owner) {
 	echo "Wil je deze notitie echt verwijderen?<br>"; 
-	?><html><br><br>
-	<a href="note_delete.php?id=<?php echo $_GET['id'] ?>&confirm=yes">Ja</a>
+	?>
+	<br><a href="note_delete.php?id=<?php echo $_GET['id'] ?>&confirm=yes">Ja</a>
     <a href="note_delete.php?id=<?php echo $_GET['id'] ?>&confirm=no">Nee</a>
-    </html> <?php
+    <?php
 	} else {
 		header('Location: my_notes.php');
 	}
@@ -37,4 +48,6 @@ if (isset($_GET['id'])) {
 			header('Location: my_notes.php');
 			}
     }
-}
+} ?>
+</body>
+</html>
